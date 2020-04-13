@@ -16,7 +16,7 @@ set inccommand=split
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
-nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
-nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>ev :vsplit ~/.config/dotfiles/nvim/init.vim<cr>
+nnoremap <leader>sv :source ~/.config/dotfiles/nvim/init.vim<cr>
 
 nnoremap <c-p> :Files<cr>
