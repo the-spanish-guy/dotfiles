@@ -14,9 +14,12 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
 "Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
-
+syntax on
+set t_Co=256
 set encoding=UTF-8
 
 "enable ncm2 for all buffers
@@ -25,19 +28,6 @@ set completeopt=noinsert,menuone,noselect
 let g:python3_host_prog='/usr/bin/python3'
 
 filetype plugin on
-"Uncomment to override defaults:
-"let g:instant_markdown_slow = 1
-"let g:instant_markdown_autostart = 0
-"let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-"let g:instant_markdown_allow_external_content = 0
-
-"let g:instant_markdown_mathjax = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-"let g:instant_markdown_autoscroll = 0
-"let g:instant_markdown_port = 8888
-"let g:instant_markdown_python = 1
-"let g:instant_markdown_browser = "firefox --new-window"
 
 "configs for markdown-preview plugin
 let g:mkdp_refresh_slow = 0
@@ -46,6 +36,12 @@ let g:mkdp_refresh_slow = 0
 let g:NERDTreeGitStatusWithFlags = 1
 let g:instant_markdown_autostart = 0
 
+
+"coc settings
+let g:coc_global_extensions = [	'coc-emmet', 'coc-json',	'coc-phpls',	'coc-yaml',	'coc-highlight',	'coc-css',	'coc-prettier']
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+set termguicolors
 set hidden
 set number
 set mouse=a
@@ -53,6 +49,8 @@ set inccommand=split
 set smarttab
 set tabstop=2
 set shiftwidth=2
+
+verbose imap <tab>
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
