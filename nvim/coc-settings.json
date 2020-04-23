@@ -1,0 +1,9 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [ "javascript", "javascriptreact", "css", "json" ],
+	"highlight.colors.enable": true,
+	"highlight.document.enable": true,
+	"coc.preferences.colorSupport": true,
+	"coc.preferences.enableFloatHighlight": true,
+	"prettier.eslintIntegration": true,
+	"prettier.tabWidth": 2
+}
