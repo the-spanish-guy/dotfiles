@@ -9,6 +9,10 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
+
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
+
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
@@ -57,9 +61,15 @@ let g:airline_theme='base16_snazzy'
 let g:coc_global_extensions = [	'coc-emmet', 'coc-json',	'coc-phpls',	'coc-yaml',	'coc-highlight',	'coc-css',	'coc-prettier']
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+"configs for ultisnips
+let g:UltiSnipsEditSplit = 'vertical'
+let g:UltiSnipsSnippetDir = '~/.config/nvim/UltiSnips'
+
+"set some configs
 set termguicolors
 set hidden
 set number
+set relativenumber
 set mouse=a
 set inccommand=split
 set smarttab
