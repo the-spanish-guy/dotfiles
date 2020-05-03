@@ -33,31 +33,21 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'preservim/nerdcommenter'
 
 "propriedades, variaveis etc, com barra lateral
-"Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim'
+"Plug 'majutsushi/tagbar'
 
 Plug 'Yggdroot/indentLine'
-
-Plug 'majutsushi/tagbar'
-
-
-"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
 
+
+""""""""""""""""""""""""""""
+" configurações iniciais
+""""""""""""""""""""""""""""
+filetype plugin on
 syntax on
 set t_Co=256
 set encoding=UTF-8
 set guifont=Fira_Code:h10
-
-
-let g:gitgutter_max_signs = 999
-if emoji#available()
-	let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-	let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-	let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-	let g:gitgutter_sign_modified_removed = emoji#for('collision')
-endif
-
-"set some configs
 if (has("termguicolors"))
 	set termguicolors
 endif
@@ -76,26 +66,61 @@ set shortmess+=c
 set completefunc=emoji#complete
 
 
-"set seti with colorscheme
+""""""""""""""""""""""""""""
+" set seti with colorscheme
+""""""""""""""""""""""""""""
 "colorscheme seti
+
+
+""""""""""""""""""""""""""""
+" caminho para alguns executaveis
+""""""""""""""""""""""""""""
 let g:python3_host_prog='/usr/bin/python3'
 let g:coc_node_path='/usr/bin/node'
-filetype plugin on
 
-"configs for markdown-preview plugin
+
+""""""""""""""""""""""""""""
+" Vim-gitgutter
+""""""""""""""""""""""""""""
+let g:gitgutter_max_signs = 999
+
+
+""""""""""""""""""""""""""""
+" vim-emoji
+""""""""""""""""""""""""""""
+if emoji#available()
+	let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+	let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+	let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+	let g:gitgutter_sign_modified_removed = emoji#for('collision')
+endif
+
+
+""""""""""""""""""""""""""""
+" iamcco/markdown-preview.nvim
+""""""""""""""""""""""""""""
 let g:mkdp_refresh_slow = 0
 
 
-let g:NERDTreeGitStatusWithFlags = 1
-let g:instant_markdown_autostart = 0
 
-"vim airline config
+""""""""""""""""""""""""""""
+" nerdtree
+""""""""""""""""""""""""""""
+let g:NERDTreeGitStatusWithFlags = 1
+"let g:instant_markdown_autostart = 0
+
+""""""""""""""""""""""""""""
+" vim-airline / vim-airline_theme
+""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
 "let g:airline_symbols
 let g:airline_theme='base16_snazzy'
 "end airline config
 
-"coc settings
+
+""""""""""""""""""""""""""""
+" coc.nvim
+""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
 	\	'coc-snippets',
 	\ 'coc-emmet',
@@ -106,6 +131,8 @@ let g:coc_global_extensions = [
 	\	'coc-prettier',
 	\	'coc-eslint',
 	\ 'coc-highlight',
+	\ 'coc-jedi',
+	\ 'coc-python',
 	\	]
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -115,10 +142,6 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -159,26 +182,47 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+
+""""""""""""""""""""""""""""
+" vim-nerdtree-syntax-highlight
+""""""""""""""""""""""""""""
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 
 
 
+""""""""""""""""""""""""""""
+" vista.vim
+""""""""""""""""""""""""""""
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+set statusline+=%{NearestMethodOrFunction()}
+
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#icons = {
+	\   "function": "\uf794",
+	\   "variable": "\uf71b",
+	\  }
 
 
-"function! NearestMethodOrFunction() abort
-  "return get(b:, 'vista_nearest_method_or_function', '')
-"endfunction
+""""""""""""""""""""""""""""
+" indentLine
+""""""""""""""""""""""""""""
+let g:indentLine_enabled = 1
+let g:indentLine_bgcolor_term = 202
 
-"set statusline+=%{NearestMethodOrFunction()}
-" By default vista.vim never run if you don't call it explicitly.
-"
-" If you want to show the nearest function in your statusline automatically,
-" you can add the following line to your vimrc 
-"autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-
-let g:indentLine_char = 'c'
+"Ative e coloque a cor desejada como background dos caracteres
+"let g:indentLine_bgcolor_gui = '#fcc9fc'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+
 
 
 verbose imap <tab>
