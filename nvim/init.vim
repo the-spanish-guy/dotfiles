@@ -8,8 +8,6 @@ Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 
-Plug 'ap/vim-css-color'
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'preservim/nerdtree'
@@ -31,6 +29,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'preservim/nerdcommenter'
+
+
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 "propriedades, variaveis etc, com barra lateral
 Plug 'liuchengxu/vista.vim'
@@ -124,13 +126,12 @@ let g:airline_theme='base16_snazzy'
 let g:coc_global_extensions = [
 	\	'coc-snippets',
 	\ 'coc-emmet',
+	\ 'coc-css',
 	\ 'coc-json', 
 	\ 'coc-phpls',
 	\ 'coc-yaml',
-	\	'coc-css',
 	\	'coc-prettier',
 	\	'coc-eslint',
-	\ 'coc-highlight',
 	\ 'coc-jedi',
 	\ 'coc-python',
 	\	]
@@ -223,6 +224,23 @@ let g:indentLine_bgcolor_term = 202
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
+""""""""""""""""""""""""""""
+" norcalli/nvim-colorizer.lua
+""""""""""""""""""""""""""""
+lua require'plug-colorizer'
+au VimEnter * nested ColorizerAttachToBuffer "setando o colorizer no buffer
+
+
+
+""""""""""""""""""""""""""""
+" rainbow_parentheses.vim
+""""""""""""""""""""""""""""
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+
+" List of colors that you do not want. ANSI code or #RRGGBB
+let g:rainbow#blacklist = [233, 234]
+autocmd FileType * RainbowParentheses
 
 
 verbose imap <tab>
