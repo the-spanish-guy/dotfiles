@@ -47,6 +47,7 @@ call plug#end()
 """"""""""""""""""""""""""""
 filetype plugin on
 syntax on
+syntax enable
 set t_Co=256
 set encoding=UTF-8
 set guifont=Fira_Code:h10
@@ -66,6 +67,30 @@ set updatetime=300
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 set completefunc=emoji#complete
+
+" open new split panes to right and below
+set splitright
+set splitbelow
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-j>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://zsh
+  resize 10
+endfunction
+nnoremap <c-j> :call OpenTerminal()<CR>
+
+" use alt+hjkl to move between split/vsplit panels
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 
 """"""""""""""""""""""""""""
@@ -104,12 +129,37 @@ endif
 let g:mkdp_refresh_slow = 0
 
 
+""""""""""""""""""""""""""""
+" nerdtree-git-plugin
+""""""""""""""""""""""""""""
+let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+
 
 """"""""""""""""""""""""""""
 " nerdtree
 """"""""""""""""""""""""""""
-let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
 "let g:instant_markdown_autostart = 0
+"Fecha automaticamente o NERDTree se só sobrar eleem aberto
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Toggle
+
 
 """"""""""""""""""""""""""""
 " vim-airline / vim-airline_theme
@@ -126,6 +176,7 @@ let g:airline_theme='base16_snazzy'
 let g:coc_global_extensions = [
 	\	'coc-snippets',
 	\ 'coc-emmet',
+	\	'coc-html',
 	\ 'coc-css',
 	\ 'coc-json', 
 	\ 'coc-phpls',
@@ -159,7 +210,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 
-
 """"""""""""""""""
 "	vim-gitgutter
 """"""""""""""""""
@@ -168,28 +218,10 @@ nmap [h <Plug>(GitGutterPrevHunk)
 
 
 """"""""""""""""""""""""""""
-" nerdtree-git-plugin
-""""""""""""""""""""""""""""
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
-
-
-""""""""""""""""""""""""""""
 " vim-nerdtree-syntax-highlight
 """"""""""""""""""""""""""""
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
-
 
 
 """"""""""""""""""""""""""""
@@ -253,3 +285,9 @@ nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<cr>
 nnoremap <c-b> :NERDTreeToggle<cr>
+
+nnoremap <C-a> ggvG$
+vnoremap <leader>y  "+y
+nnoremap <leader>Y  "+yg_
+nnoremap <leader>y  "+y
+nnoremap <leader>yy  "+yy
