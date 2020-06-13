@@ -38,9 +38,11 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'liuchengxu/vista.vim'
 "Plug 'majutsushi/tagbar'
 
-Plug 'Yggdroot/indentLine'
-call plug#end()
+"Plug 'joshdick/onedark.vim'
 
+Plug 'Yggdroot/indentLine'
+
+call plug#end()
 
 """"""""""""""""""""""""""""
 " configurações iniciais
@@ -68,35 +70,31 @@ set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 set completefunc=emoji#complete
 
+
+""""""""""""""""""""""""""""
+" Terminal Integrado
+""""""""""""""""""""""""""""
 " open new split panes to right and below
 set splitright
 set splitbelow
-" turn terminal to normal mode with escape
+
+" Esc para sair do modo inserção do terminal
 tnoremap <Esc> <C-\><C-j>
-" start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
+
+"ctrl+j abre o terminal
 function! OpenTerminal()
   split term://zsh
   resize 10
 endfunction
 nnoremap <c-j> :call OpenTerminal()<CR>
 
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 
 """"""""""""""""""""""""""""
 " set seti with colorscheme
 """"""""""""""""""""""""""""
-"colorscheme seti
+"colorscheme onedark
 
 
 """"""""""""""""""""""""""""
@@ -124,6 +122,20 @@ endif
 
 
 """"""""""""""""""""""""""""
+" w0rp/ale
+""""""""""""""""""""""""""""
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+"highlight ALEErrorSign ctermbg=NONE ctermfg=red
+"highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
+
+
+""""""""""""""""""""""""""""
 " iamcco/markdown-preview.nvim
 """"""""""""""""""""""""""""
 let g:mkdp_refresh_slow = 0
@@ -132,7 +144,7 @@ let g:mkdp_refresh_slow = 0
 """"""""""""""""""""""""""""
 " nerdtree-git-plugin
 """"""""""""""""""""""""""""
-let g:NERDTreeGitStatusWithFlags = 1
+"let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -151,10 +163,11 @@ let g:NERDTreeIndicatorMapCustom = {
 """"""""""""""""""""""""""""
 " nerdtree
 """"""""""""""""""""""""""""
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
+let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeIgnore = []
+let NERDTreeStatusline = ''
 "let g:instant_markdown_autostart = 0
 "Fecha automaticamente o NERDTree se só sobrar eleem aberto
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -181,8 +194,6 @@ let g:coc_global_extensions = [
 	\ 'coc-json', 
 	\ 'coc-phpls',
 	\ 'coc-yaml',
-	\	'coc-prettier',
-	\	'coc-eslint',
 	\ 'coc-jedi',
 	\ 'coc-python',
 	\	]
@@ -291,3 +302,14 @@ vnoremap <leader>y  "+y
 nnoremap <leader>Y  "+yg_
 nnoremap <leader>y  "+y
 nnoremap <leader>yy  "+yy
+
+"Use alt+hjkl para intercalar entre os terminais
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
