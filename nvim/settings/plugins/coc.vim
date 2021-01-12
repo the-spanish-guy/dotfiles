@@ -1,0 +1,36 @@
+""""""""""""""""""""""""""""
+" coc.nvim
+""""""""""""""""""""""""""""
+let g:coc_global_extensions = [
+	\	'coc-snippets',
+	\ 'coc-emmet',
+	\	'coc-html',
+	\ 'coc-css',
+	\ 'coc-json', 
+	\ 'coc-phpls',
+	\ 'coc-yaml',
+	\ 'coc-tsserver',
+	\ 'coc-jedi',
+	\ 'coc-python',
+	\	]
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
