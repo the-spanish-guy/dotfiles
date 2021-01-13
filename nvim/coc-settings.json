@@ -1,9 +1,26 @@
 {
-	"coc.preferences.formatOnSaveFiletypes": [ "javascript", "javascriptreact", "css", "json" ],
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"javascriptreact",
+		"css",
+		"json"
+	],
 	"highlight.colors.enable": true,
 	"highlight.document.enable": true,
 	"coc.preferences.colorSupport": true,
 	"coc.preferences.enableFloatHighlight": true,
 	"prettier.eslintIntegration": true,
-	"prettier.tabWidth": 2
+	"prettier.tabWidth": 2,
+	// explorer
+	"explorer.width": 30,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.previewAction.onHover": "labeling",
+	"explorer.keyMappings.global": {
+		"<cr>": [
+			"expandable?",
+			"expand",
+			"open"
+		],
+		"v": "open:vsplit"
+	}
 }
