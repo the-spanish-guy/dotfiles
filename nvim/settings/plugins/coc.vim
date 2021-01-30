@@ -13,6 +13,8 @@ let g:coc_global_extensions = [
 	\ 'coc-jedi',
 	\ 'coc-python',
 	\ 'coc-explorer',
+	\ 'coc-eslint',
+	\ 'coc-prettier',
 	\	]
 
 nmap <silent> gd <Plug>(coc-definition)
