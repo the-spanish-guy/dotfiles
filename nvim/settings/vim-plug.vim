@@ -16,4 +16,7 @@ Plug 'iamcco/markdown-preview.nvim', {
 			\}
 Plug 'junegunn/goyo.vim'
 Plug 'preservim/nerdcommenter'										"Comentarios
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'														" Busca
 call plug#end()
