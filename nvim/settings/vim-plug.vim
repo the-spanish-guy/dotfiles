@@ -10,7 +10,8 @@ Plug 'Yggdroot/indentLine'												"IndentLine
 Plug 'vim-airline/vim-airline'										"StatusBar / TabLine
 Plug 'vim-airline/vim-airline-themes'							"Temas parea StatusBar
 Plug 'glepnir/oceanic-material'										"Tema	-	Oceanic Material
-Plug 'hzchirs/vim-material'												"Tema - Material
+"Plug 'hzchirs/vim-material'												"Tema - Material
+Plug 'joshdick/onedark.vim'
 Plug 'iamcco/markdown-preview.nvim', {
 			\ 'do': 'cd app && yarn install'
 			\}
