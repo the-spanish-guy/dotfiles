@@ -1,26 +1,50 @@
 {
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"javascriptreact",
-		"css",
-		"json"
-	],
-	"highlight.colors.enable": true,
-	"highlight.document.enable": true,
-	"coc.preferences.colorSupport": true,
-	"coc.preferences.enableFloatHighlight": true,
-	"prettier.eslintIntegration": true,
-	"prettier.tabWidth": 2,
-	// explorer
-	"explorer.width": 30,
-	"explorer.icon.enableNerdfont": true,
-	"explorer.previewAction.onHover": "labeling",
-	"explorer.keyMappings.global": {
-		"<cr>": [
-			"expandable?",
-			"expand",
-			"open"
-		],
-		"v": "open:vsplit"
-	}
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "css",
+    "json"
+  ],
+  //"diagnostic.displayByAle": true,
+  "highlight.colors.enable": true,
+  "highlight.document.enable": true,
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.enableFloatHighlight": true,
+  "prettier.eslintIntegration": true,
+  "prettier.tabWidth": 2,
+  // explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": "labeling",
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
+  "suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": " פּ ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": "  ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  "
+  }
 }
