@@ -30,4 +30,6 @@ nnoremap <Esc> <C-\><C-n>
 inoremap <Esc> <C-\><C-n>
 tnoremap <Esc> <C-\><C-n>
 
+" Buffers
+nnoremap <silent> <Tab> :bnext<CR>
 
