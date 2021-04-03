@@ -10,3 +10,4 @@ source $HOME/.config/nvim/settings/plugins/vim-airline.vim
 source $HOME/.config/nvim/settings/plugins/markdown-preview.vim
 "source $HOME/.config/nvim/settings/themes/material-theme.vim
 source $HOME/.config/nvim/settings/themes/onedark.vim
+source $HOME/.config/nvim/settings/plugins/dashboard.vim
