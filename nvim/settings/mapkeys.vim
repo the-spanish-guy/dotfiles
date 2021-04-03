@@ -33,3 +33,18 @@ tnoremap <Esc> <C-\><C-n>
 " Buffers
 nnoremap <silent> <Tab> :bnext<CR>
 
+""""""""""""""""""""""""""""
+" Movendo a linha selecionada ↑↓
+" Alt - j Move a linha do cursor pra cima
+" Alt - k Move a linha do cursor pra baixo
+"
+" Também é possivel mover as linhas selecionadas
+""""""""""""""""""""""""""""
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+xnoremap <A-j> :m'>+<CR>gv=gv
+xnoremap <A-k> :m-2<CR>gv=gv
