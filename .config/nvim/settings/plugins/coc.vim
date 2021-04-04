@@ -15,6 +15,7 @@ let g:coc_global_extensions = [
 	\ 'coc-explorer',
 	\ 'coc-eslint',
 	\ 'coc-prettier',
+	\ 'coc-vetur',
 	\	]
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -50,6 +51,10 @@ let g:coc_explorer_global_presets = {
 \     'position': 'tab',
 \     'quit-on-open': v:true,
 \   },
+\   'tab:$': {
+\     'position': 'tab:$',
+\     'quit-on-open': v:true,
+\   },
 \   'floating': {
 \     'position': 'floating',
 \     'open-action-strategy': 'sourceWindow',
@@ -73,7 +78,10 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'simplify': {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
+\   },
+\   'buffer': {
+\     'sources': [{'name': 'buffer', 'expand': v:true}]
+\   },
 \ }
 
 nmap <leader>e :CocCommand explorer<CR>

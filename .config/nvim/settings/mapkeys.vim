@@ -1,5 +1,6 @@
 let mapleader="\<space>"
 nnoremap <leader>sv :source ~/.config/nvim/init.vim
+nnoremap <leader>ev :e ~/.config/nvim/init.vim<CR>
 
 """ Comandos para busca por arquivo ou palavra em um arquivo
 nnoremap <c-p> :Files<cr>

@@ -29,4 +29,6 @@ Plug 'junegunn/fzf', {
 Plug 'junegunn/fzf.vim'									" Fuzzy Finder - Busca
 
 Plug 'glepnir/dashboard-nvim'						" StartScreen
+
+Plug 'ryanoasis/vim-devicons'
 call plug#end()

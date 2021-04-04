@@ -3,7 +3,9 @@ syntax on
 syntax enable
 set t_Co=256
 set encoding=UTF-8
-set guifont=Fira_Code:h10
+"set guifont=Fira_Code_Nerd_Font:h10
+"set guifont=FiraCode\ Nerd\ Font\ 10
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 if (has("termguicolors"))
 	set termguicolors
 endif
