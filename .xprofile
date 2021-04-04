@@ -1,0 +1,20 @@
+# screen
+xrandr -s 2560x1080 &
+
+# Compositor
+picom &
+
+# keyaboard layout br
+setxkbmap -layout br &
+
+# Wallpaper
+feh --bg-scale ~/.wallpapers/12-Dracula-LINUX-2k.png
+
+# Network
+nm-applet &
+
+# Automount devices
+udiskie -t &
+
+volumeicon &
+cbatticon &
