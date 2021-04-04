@@ -1,7 +1,3 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
 # Multimonitor support
 
 from libqtile.config import Screen
@@ -12,7 +8,7 @@ import subprocess
 
 
 def status_bar(widgets):
-    return bar.Bar(widgets, 24, opacity=0.95, margin=[3,3,0,3])
+    return bar.Bar(widgets, 24, opacity=0.95, margin=[3, 3, 0, 3])
 
 
 screens = [Screen(top=status_bar(primary_widgets))]
