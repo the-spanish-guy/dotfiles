@@ -15,7 +15,7 @@ cloneProject() { \
 	echo "cloning nvim configs"
 	git clone https://github.com/the-spanish-guy/dotfiles.git  ${DESTINATION_FOLDER}
 	mkdir ~/.config/nvim -p
-	cp -r ${DESTINATION_FOLDER}/nvim/lua ${DESTINATION_FOLDER}/nvim/settings ${DESTINATION_FOLDER}/nvim/coc-settings.json ${DESTINATION_FOLDER}/nvim/init.vim ~/.config/nvim
+	cp -r ${DESTINATION_FOLDER}/.config/nvim/lua ${DESTINATION_FOLDER}/.config/nvim/settings ${DESTINATION_FOLDER}/.config/nvim/coc-settings.json ${DESTINATION_FOLDER}/.config/nvim/init.vim ~/.config/nvim
 
 	echo "removing repo"
 }

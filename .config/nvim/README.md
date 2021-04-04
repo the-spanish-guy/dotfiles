@@ -7,7 +7,7 @@
 - Instalação via script via script
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/nvim/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/.config/nvim/install.sh)
 ```
 
 - Instalando o [vim-plug](https://github.com/junegunn/vim-plug)
