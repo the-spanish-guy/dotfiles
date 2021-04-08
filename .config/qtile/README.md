@@ -2,6 +2,7 @@
 
 ![Qtile](../../.screenshots/qtile.png)
 
+
 **Idioma**
 >Algumas configurações foram pegas deste <a href="https://github.com/antoniosarosi/dotfiles" target="_blank">repositorio</a> mas foram modificadas conforme meu uso
 
