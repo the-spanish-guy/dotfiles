@@ -1,6 +1,6 @@
 # Qtile
 
-![Qtile](https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/.screenshots/qtile.png)
+![Qtile](../../.screenshots/qtile.png)
 
 
 **Idioma**
