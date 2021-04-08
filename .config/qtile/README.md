@@ -136,3 +136,7 @@ Aqui tem apenas uma função  _autostart_ e algumas outras variáveis como _curs
 
 ### :pencil: autostart.sh
 Caso queira mudar alguns programas inicializados no `autostart.sh` basta abrir o mesmo e editar
+
+---
+
+Feito por [the spanish guy](https://github.com/the-spanish-guy) com :purple_heart:
