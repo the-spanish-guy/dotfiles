@@ -29,7 +29,7 @@ def powerline(fg="light", bg="dark"):
         **base(fg, bg),
         text="",  # Icon: nf-oct-triangle_left
         fontsize=37,
-        padding=-2
+        padding=-2,
     )
 
 
@@ -89,10 +89,13 @@ primary_widgets = [
 
     powerline('color3', 'color4'),
 
-    icon(bg="color3", text=' '),  # Icon: nf-fa-feed
+    # icon(bg="color3", text=' '),  # Icon: nf-fa-feed
 
     # widget.Net(**base(bg='color3'), interface='wlp2s0'),
-    widget.Net(**base(bg='color3'), interface='enp4s0'),
+    # widget.Net(**base(bg='color3'), interface='enp4s0'),
+
+    icon(bg="color3", text='  '), # nf-fa-volume_up
+    widget.PulseVolume(**base(bg='color3'), padding=4),
 
     powerline('color2', 'color3'),
 
@@ -110,15 +113,15 @@ primary_widgets = [
 
     # powerline('dark', 'color1'),
 
-    powerline('color2', 'color1'),
+    powerline('color4', 'color1'),
 
 
-    icon(bg="color2", text=' '),  # Icon: nf-mdi-keyboard_variant
+    icon(bg="color4", text=' '),  # Icon: nf-mdi-keyboard_variant
 
     widget.KeyboardLayout(
-        **base(bg='color2'), update_interval=100, configured_keyboards=["br", "us"], display_map={'us': '   ', 'br': '   '}),
+        **base(bg='color4'), update_interval=100, configured_keyboards=["br", "us"], display_map={'us': '   ', 'br': '   '}),
 
-    powerline('dark', 'color2'),
+    powerline('dark', 'color4'),
 
     widget.Systray(background=colors['dark'], padding=5),
 ]

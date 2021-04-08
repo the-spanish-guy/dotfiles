@@ -11,14 +11,14 @@ from settings.keys import mod, keys
 # nf-fa-github,
 # nf-fa-terminal,
 # nf-fa-code,
-# nf-seti-config,
 # nf-fa-folder_o,
 # nf-mdi-image,
 # nf-fa-video_camera,
+# nf-mdi-discord,
 # nf-fa-spotify
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "   ", "   ", "   ", "  ﭮ ", "   ",
 ]]
 
 for i, group in enumerate(groups):
