@@ -14,9 +14,13 @@ set relativenumber
 set mouse=a
 set inccommand=split
 set background=dark
-set tabstop=2
+set expandtab       " tabs are space
 set smarttab
 set shiftwidth=2
+set tabstop=2
+set softtabstop=2   " number of spaces in tab when editing
+set autoindent
+set copyindent      " copy indent from the previous line
 set termguicolors
 set cmdheight=2        " Give more space for displaying messages.
 set completeopt=noinsert,menuone,noselect
