@@ -1,56 +1,60 @@
-A theme consists of a simple json file. You can create your own by copying this
-json object and changing values:
+O tema consiste em um arquivo json igual mostrado abaixo.<br>
+Caso queira criar um novo, basta copiar o template abaixo, e substituir pelas cores de sua preferência.
+
 
 ```json
 {
     "dark": [
-        "#0f101a",
-        "#0f101a"
+        "#1B2135",
+        "#1B2135"
     ],
     "grey": [
-        "#353c4a",
-        "#353c4a"
+        "#CCD8EC",
+        "#CCD8EC"
     ],
     "light": [
-        "#f1ffff",
-        "#f1ffff"
+        "#ffffff",
+        "#ffffff"
     ],
     "text": [
-        "#0f101a",
-        "#0f101a"
+        "#1B2135",
+        "#1B2135"
     ],
     "focus": [
-        "#a151d3",
-        "#a151d3"
+        "#54C4E4",
+        "#54C4E4"
     ],
     "active": [
-        "#f1ffff",
-        "#f1ffff"
+        "#295e6e",
+        "#295e6e"
     ],
     "inactive": [
         "#4c566a",
         "#4c566a"
     ],
     "urgent": [
-        "#F07178",
-        "#F07178"
+        "#F98585",
+        "#F98585"
     ],
     "color1": [
-        "#a151d3",
-        "#a151d3"
+        "#e8a4fc",
+        "#e8a4fc"
     ],
     "color2": [
-        "#F07178",
-        "#F07178"
+        "#F98585",
+        "#F98585"
     ],
     "color3": [
-        "#fb9f7f",
-        "#fb9f7f"
+        "#54C4E4",
+        "#54C4E4"
     ],
     "color4": [
-        "#ffd47e",
-        "#ffd47e"
+        "#A3DE9A",
+        "#A3DE9A"
     ]
 }
 
 ```
+As cores definidas acima é referente ao [ith](./ith.json)
+![view1](../../../.screenshots/qtile_bar_color_1.png)
+![view1](../../../.screenshots/qtile_bar_color_2.png)
