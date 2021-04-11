@@ -16,7 +16,7 @@ nnoremap <leader>yy  "+yy
 
 """"""""""""""""""""""""""""
 " Terminal Integrado
-"	alt+hjkl para intercalar entre os terminais
+" alt+hjkl para intercalar entre os terminais
 """"""""""""""""""""""""""""
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j

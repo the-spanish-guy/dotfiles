@@ -22,7 +22,7 @@ set softtabstop=2   " number of spaces in tab when editing
 set autoindent
 set copyindent      " copy indent from the previous line
 set termguicolors
-set cmdheight=2        " Give more space for displaying messages.
+set cmdheight=2     " Give more space for displaying messages.
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 
