@@ -2,6 +2,8 @@
 
 > Minhas configurações para o [neo**vim**](https://github.com/neovim/neovim)
 
+![nvim](../../.screenshots/nvim.png)
+
 ## Instalação
 
 - Instalação via script via script
@@ -10,66 +12,48 @@
 bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/.config/nvim/install.sh)
 ```
 
-- Instalando o [vim-plug](https://github.com/junegunn/vim-plug)
+## Lista de plugins
 
-```sh
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+- [Nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+- [Nvim-tree](https://github.com/kyazdani42/nvim-tree.lua) (need neovim-nightly)
+- [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
+- [CoC](https://github.com/neoclide/coc.nvim)
+- [Asynchronous Lint Engine](https://github.com/dense-analysis/ale)
+- [Rainbow Parentheses](https://github.com/junegunn/rainbow_parentheses.vim)
+- [colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+- [indentLine](https://github.com/Yggdroot/indentLine)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+- [Oceanic Material](https://github.com/glepnir/oceanic-material)
+- [vim-material](https://github.com/hzchirs/vim-material)
+- [Onedark](https://github.com/joshdick/onedark.vim)
+- [✨ Markdown Preview for (Neo)vim ✨](https://github.com/iamcco/markdown-preview.nvim)
+- [goyo](https://github.com/junegunn/goyo.vim)
+- [NERD Commenter](https://github.com/preservim/nerdcommenter)
+- [fzf :heart: vim](https://github.com/junegunn/fzf.vim)
+- [Dashboard](https://github.com/glepnir/dashboard-nvim)
+- [Vim devicons](https://github.com/ryanoasis/vim-devicons)
 
-```
+## Keybindings
 
-- Para instalar, basta rodar o comando abaixo
+> let mapleader="\<space>"
 
-```sh
-curl -fLo ~/.config/nvim/init.vim --create-dirs \
-    https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/nvim/init.vim
-```
+| Atalho               | Ação                                                                         |
+| -------------------- | :--------------------------------------------------------------------------- |
+| ctrl + p             | Pesquisa pela palavra dentro dos arquivos                                    |
+| ctrl + f             | Pesquisa um arquivo pelo nome informado                                      |
+| ctrl + a             | Seleciona todo o conteúdo do arquivo                                         |
+| `<leader>` + y       | Copia o conteúdo selecionado para a área externa                             |
+| ctrl + j             | Abre o terminal                                                              |
+| alt + h              | ← Move o cursor para a janela esquerda                                       |
+| alt + l              | → Move o cursor para a janela direita                                        |
+| alt + k              | ↑ Move o cursor para a janela de cima                                        |
+| alt + j              | ↓ Move o cursor para a janela de baixo                                       |
+| alt + Arrow-Up (↑)   | Move o trecho de código selecionado ou a linha onde o cursor esta para cima  |
+| alt + Arrow-Down (↓) | Move o trecho de código selecionado ou a linha onde o cursor esta para baixo |
+| ctrl + b             | Abre o explorador de arquivos (Nvim-Tree)                                    |
+| `<leader>` + e       | Abre o explorador de arquivos (coc-explorer)                                 |
 
-lista dos plugins instalados:
+---
 
-- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) - Para usa-lo basta fazer `ctrl n` e ele irá selecionar as palavras após aperte `c` e você será capaz de editar todas as palavras que estão sublinhadas.
-
-  ```sh
-  Plug 'terryma/vim-multiple-cursors'
-  ```
-
-- [vim-polyglot](https://github.com/sheerun/vim-polyglot) - Syntax para vim, se usar template string no js ele irá reconhcer.
-
-  ```sh
-  Plug 'sheerun/vim-polyglot'
-  ```
-
-- [fzf.vim](https://github.com/junegunn/fzf.vim) - Permite pesquisar uma ocorrências em todos os arquivos na pasta raiz, para usar basta digitar o comando `: Files` ou pelo prefixo `ctrl + p`.
-  Caso faça uso do [silver search](https://github.com/ggreer/the_silver_searcher) basta digitar os seguintes comandos `ctrl + f` e o fzf se integrará automaticamente com o silver search.
-
-  ```sh
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  ```
-
-- [ncm2](https://github.com/ncm2/ncm2) - Autocomplete, basta digitar e ele irá sugerir autocomplete automaticamente, basta escolher com a seta pra baixo &#8595; e teclar enter para confirmar a seleção.
-
-  > Se você usa o [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager) sugiro mudar para o [ncm2](https://github.com/ncm2/ncm2) pois o antigo não tem mais suporte.
-
-  ```sh
-  Plug 'ncm2/ncm2'
-  ```
-
-- [ale](github.com/w0rp/ale) - Caso tenha algum lint configurado o ale irá se integrar automaticamente com ele e mostrará os erros.
-
-  ```sh
-  Plug 'w0rp/ale'
-  ```
-
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs) - insere os pares de `(), {}, []` sempre que abrir um dos caracteres ele irá fecha-los automaticamente.
-
-  ```sh
-  Plug 'jiangmiao/auto-pairs'
-  ```
-
-- [UltiSnips](https://github.com/sirver/UltiSnips) - Carregue ou crie snippets para seu uso
-
-  ```sh
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
-  ```
+Feito por [the spanish guy](https://github.com/the-spanish-guy) com :purple_heart:
