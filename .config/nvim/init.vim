@@ -1,3 +1,10 @@
+"  ___ _ __   __ _ _ __ (_)___| |__     Luis Enrique (spanish)
+" / __| '_ \ / _` | '_ \| / __| '_ \    https://www.instagram.com/luyo98/
+" \__ \ |_) | (_| | | | | \__ \ | | |   http://github.com/the-spanish-guy
+" |___/ .__/ \__,_|_| |_|_|___/_| |_|   https://dev.to/thespanishguy
+"     |_|
+
+
 """"""""""""""""""""""""""""
 " Default configs
 """"""""""""""""""""""""""""
