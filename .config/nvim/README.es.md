@@ -8,7 +8,7 @@
 
 ## :white_flag: Idioma
 - :es:/:peru: Español
-- [:brazil: Portugues](./README.md)
+- [:brazil: Portugues](https://github.com/the-spanish-guy/dotfiles/tree/nvim/.config/nvim#readme)
 
 ## :wrench: Instalación
 
