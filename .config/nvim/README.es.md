@@ -10,7 +10,7 @@
 
 ## :wrench: Instalación
 
-Para usar esta configuración executa
+Para usar esta configuración ejecuta
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/.config/nvim/install.sh)
