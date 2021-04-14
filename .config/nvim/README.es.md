@@ -1,6 +1,4 @@
- :wrench:
- :package:
- :keyboard:NEOVIM configs
+# NEOVIM configs
 
 > Mis configuraciones para [neo**vim**](https://github.com/neovim/neovim)
 
