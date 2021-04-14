@@ -8,7 +8,7 @@
 
 ## :white_flag: Idioma
 - :es:/:peru: Español
-- [:brazil: Portugues](./README)
+- [:brazil: Portugues](./README.md)
 
 ## :wrench: Instalación
 
