@@ -4,7 +4,13 @@
 
 ![nvim](../../.screenshots/nvim.png)
 
-## Instalação
+## :speech_balloon: Idioma
+
+- [:peru: Español](./README.es.md)
+- :brazil: Português
+- [:us: English](./README.us.md)
+
+## :wrench: Instalação
 
 - Instalação via script via script
 
@@ -12,7 +18,7 @@
 bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master/.config/nvim/install.sh)
 ```
 
-## Lista de plugins
+## :package: Lista de plugins
 
 - [Nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - [Nvim-tree](https://github.com/kyazdani42/nvim-tree.lua) (need neovim-nightly)
@@ -34,7 +40,7 @@ bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master
 - [Dashboard](https://github.com/glepnir/dashboard-nvim)
 - [Vim devicons](https://github.com/ryanoasis/vim-devicons)
 
-## Keybindings
+## :keyboard: Keybindings
 
 > let mapleader="\<space>"
 
