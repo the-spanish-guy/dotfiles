@@ -5,8 +5,10 @@
 ![nvim](../../.screenshots/nvim.png)
 
 ## :speech_balloon: Idioma
+
 - [:peru: Español](./README.es.md)
-- :brazil: Portugues
+- :brazil: Português
+- [:us: English](./README.us.md)
 
 ## :wrench: Instalação
 

@@ -5,8 +5,10 @@
 ![nvim](../../.screenshots/nvim.png)
 
 ## :speech_balloon: Idioma
+
 - :peru: Español
-- [:brazil: Portugues](https://github.com/the-spanish-guy/dotfiles/tree/nvim/.config/nvim#readme)
+- [:brazil: Português](https://github.com/the-spanish-guy/dotfiles/tree/nvim/.config/nvim#readme)
+- [:us: English](./README.us.md)
 
 ## :wrench: Instalación
 
@@ -47,8 +49,8 @@ bash <(curl -s https://raw.githubusercontent.com/the-spanish-guy/dotfiles/master
 | ctrl + p             | Busca por una palabra dentro de los archivos                             |
 | ctrl + f             | Busca un archivo por su nombre                                           |
 | ctrl + a             | Selecciona todo el contenido del archivo                                 |
-| `<leader>` + y       | Copia(`ctrl+c`) el contenido seleccionado                                |
-| ctrl + j             | Laza la terminal                                                         |
+| `<leader>` + y       | Copia (`ctrl+c`) el contenido seleccionado                               |
+| ctrl + j             | Lanza la terminal                                                        |
 | alt + h              | ← Mueve el cursor del ratón para la ventana izquierda                    |
 | alt + l              | → Mueve el cursor del ratón para la ventana derecha                      |
 | alt + k              | ↑ Mueve el cursor del ratón para la ventana de arriba                    |
