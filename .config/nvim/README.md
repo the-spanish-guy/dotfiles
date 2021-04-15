@@ -4,8 +4,8 @@
 
 ![nvim](../../.screenshots/nvim.png)
 
-## :white_flag: Idioma
-- [:es:/:peru: Español](./README.es.md)
+## :speech_balloon: Idioma
+- [:peru: Español](./README.es.md)
 - :brazil: Portugues
 
 ## :wrench: Instalação

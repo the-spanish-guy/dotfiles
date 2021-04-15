@@ -4,8 +4,8 @@
 
 ![nvim](../../.screenshots/nvim.png)
 
-## :white_flag: Idioma
-- :es:/:peru: Español
+## :speech_balloon: Idioma
+- :peru: Español
 - [:brazil: Portugues](https://github.com/the-spanish-guy/dotfiles/tree/nvim/.config/nvim#readme)
 
 ## :wrench: Instalación
