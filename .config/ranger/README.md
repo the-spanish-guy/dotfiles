@@ -2,6 +2,13 @@
 
 ![ranger](../../.screenshots/ranger.png)
 
+## :speech_balloon: Idioma
+
+- [:peru: Español](./README.es.md)
+- :brazil: Português
+- [:us: English](./README.us.md)
+
+
 ## :wrench: Instalação
 
 > Para mais opções [verifique aqui](https://github.com/ranger/ranger#installing)
