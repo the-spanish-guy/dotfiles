@@ -123,11 +123,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='colorls -lA --sd --gs --group-directories-first'
-alias ls='colorls --gs --group-directories-first'
+#alias ll='colorls -lA --sd --gs --group-directories-first'
+#alias ls='colorls --gs --group-directories-first'
+alias ll='exa -l --group-directories-first --icons --colour=automatic -h -g'
+alias lll='exa -l --group-directories-first --icons --colour=automatic -h -g --all'
+alias ls='exa --group-directories-first --icons'
+alias lsl='exa --group-directories-first --icons --all'
 alias cpnvim='cp ~/.config/nvim/init.vim ~/.config/dotfiles/nvim'
 alias goLnvim='cd ~/.config/nvim/'
 alias goEnvim='cd ~/.config/dotfiles/nvim'
+alias docker_permission="sudo chmod 666 /var/run/docker.sock"
+alias .='cd ~'
+alias ..='cd ..'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
